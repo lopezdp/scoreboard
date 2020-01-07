@@ -11,3 +11,6 @@ Load and show activity/details for one specific game.
 
 ## IFrame Data Source
 App should communicate with a page in a hidden iframe as the source of all data. Data source page should deliver results both in response to request from app, such as an initial load of scores/details, as well as providing unsolicited updates of new games and scores asynchronously.
+
+## Delivery
+Please submit code by pull-request in this repo.
