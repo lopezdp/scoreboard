@@ -1,7 +1,7 @@
 {
   "name": "scoreboard",
   "description": "Scoreboard SPA to showcase an iFrame.",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "private": true,
   "dependencies": {
     "aws-amplify": "^1.2.4",
