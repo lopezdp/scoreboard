@@ -13,8 +13,7 @@ export default class Home extends Component {
 
 	renderLandingPage() {
 		return (
-			<div className="LandingPage">
-				TEST
+			<div className="home-container">
 				<GameScores />
 			</div>
 		);

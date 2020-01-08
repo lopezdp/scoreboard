@@ -3,8 +3,8 @@ import React, { Component } from "react";
 //import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 //import Jumbotron from "react-bootstrap/Jumbotron";
-//import Row from "react-bootstrap/Row";
-//import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Media from "react-media";
 import "./GameScores.css";
 //import UiLoadBtn from "./UiLoadBtn";
@@ -21,6 +21,15 @@ export default class HomeLandingPage extends Component {
 	}
 
 	render() {
-		return <Container>SetUp GameScores View</Container>;
+		return (
+			<Container className="main-view" fluid>
+				<Row className="game-view-title">
+					<h2>Games - Wild Card Weekend</h2>
+				</Row>
+				<Row className="game-view-result">
+					<h3>Final</h3>
+				</Row>
+			</Container>
+		);
 	}
 }

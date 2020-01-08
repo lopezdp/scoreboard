@@ -1,0 +1,37 @@
+.main-view {
+	font-family: "Lato", arial, sans-serif;
+	color: #434343;
+	background: #dae3e7;
+	font-size: 16px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+}
+
+.game-view-title {
+	justify-content: flex-start;
+	padding-left: 15px;
+	padding-top: 30px;
+}
+
+.game-view-title h2 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: #545e69;
+	font-size: 24px;
+}
+
+.game-view-result {
+	justify-content: flex-start;
+	padding-left: 15px;
+	padding-top: 0px;
+}
+
+.game-view-result h3 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: #545e69;
+	font-size: 20px;
+}
