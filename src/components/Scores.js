@@ -6,12 +6,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Media from "react-media";
-import "./GameScores.css";
+import "./Scores.css";
 //import UiLoadBtn from "./UiLoadBtn";
 //import Tooltip from "react-bootstrap/Tooltip";
 //import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
-export default class GameScores extends Component {
+export default class Scores extends Component {
 	constructor(props) {
 		super(props);
 
@@ -22,13 +22,8 @@ export default class GameScores extends Component {
 
 	render() {
 		return (
-			<Container className="main-view" fluid>
-				<Row className="game-view-title">
-					<h2>Games - Wild Card Weekend</h2>
-				</Row>
-				<Row className="game-view-result">
-					<h3>Final</h3>
-				</Row>
+			<Container className="scores-view" fluid>
+				<Row className="scores-view-game-results"></Row>
 			</Container>
 		);
 	}
