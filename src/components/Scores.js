@@ -27,7 +27,7 @@ export default class Scores extends Component {
 				<Row className="scores-view-game-results">
 					<Jumbotron className="results-view">
 						<Row>
-							<Col xs className="league-rank">
+							<Col className="league-rank">
 								<Row>
 									<p>5</p>
 								</Row>
@@ -37,17 +37,33 @@ export default class Scores extends Component {
 								</Row>
 							</Col>
 
-							<Col xs={10} className="team-logo">
+							<Col className="team-logo">
 								<Row>
-									<p>5</p>
+									<Image
+										alt="Bills"
+										src="/img/Bills.png"
+										className="nfl-icon"
+									/>
 								</Row>
 
 								<Row>
-									<p>4</p>
+									<Image
+										alt="Texans"
+										src="/img/Texans.png"
+										className="nfl-icon"
+									/>
 								</Row>
 							</Col>
 
-							<Col className="team-name"></Col>
+							<Col className="team-name">
+								<Row>
+									<p>Bills</p>
+								</Row>
+
+								<Row>
+									<p>Texans</p>
+								</Row>
+							</Col>
 
 							<Col className="team-record"></Col>
 

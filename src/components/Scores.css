@@ -72,11 +72,49 @@
 	margin-bottom: 30px;
 }
 
+.league-rank {
+	max-width: 40px;
+}
+
 .league-rank .row:nth-child(1) p {
 	margin-top: 1rem;
+}
+
+.league-rank .row:nth-child(2) p {
+	margin-top: 0.5rem;
 }
 
 .league-rank .row p {
 	font-weight: bold;
 	font-size: 14px;
+}
+
+.nfl-icon {
+	max-width: 1.75em;
+	max-height: 1.75em;
+}
+
+.nfl-icon:first-child {
+	margin-top: 1rem;
+}
+
+.team-logo {
+	max-width: 40px;
+}
+
+.team-logo .row:nth-child(2) .nfl-icon {
+	margin-top: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.team-name .row p {
+	font-weight: bold;
+}
+
+.team-name .row:nth-child(1) p {
+	margin-top: 1rem;
+}
+
+.team-name .row:nth-child(2) p {
+	margin-top: 0.2rem;
 }
