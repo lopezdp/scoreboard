@@ -1,0 +1,26 @@
+import React, { Component } from "react";
+//import Image from "react-bootstrap/Image";
+//import { Link } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+//import Jumbotron from "react-bootstrap/Jumbotron";
+//import Row from "react-bootstrap/Row";
+//import Col from "react-bootstrap/Col";
+import Media from "react-media";
+import "./GameScores.css";
+//import UiLoadBtn from "./UiLoadBtn";
+//import Tooltip from "react-bootstrap/Tooltip";
+//import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+
+export default class HomeLandingPage extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			isLoading: false
+		};
+	}
+
+	render() {
+		return <Container>SetUp GameScores View</Container>;
+	}
+}

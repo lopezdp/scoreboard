@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Home.css";
-//import HomeLandingPage from "../components/HomeLandingPage";
+import GameScores from "../containers/GameScores";
 
 export default class Home extends Component {
 	constructor(props) {
@@ -15,7 +15,7 @@ export default class Home extends Component {
 		return (
 			<div className="LandingPage">
 				TEST
-				{/*<HomeLandingPage />*/}
+				<GameScores />
 			</div>
 		);
 	}
