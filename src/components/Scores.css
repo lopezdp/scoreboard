@@ -4,4 +4,19 @@
 
 .results-view {
 	background: white;
+	margin-left: 30px;
+	margin-right: 30px;
+	width: 100%;
+}
+
+.results-view:first-child {
+	margin-top: 30px;
+}
+
+.jumbotron {
+	margin-bottom: 0px;
+}
+
+.scores-view-game-results:last-child .results-view {
+	margin-bottom: 30px;
 }

@@ -26,6 +26,15 @@ export default class Scores extends Component {
 				<Row className="scores-view-game-results">
 					<Jumbotron className="results-view">TEST</Jumbotron>
 				</Row>
+				<Row className="scores-view-game-results">
+					<Jumbotron className="results-view">TEST</Jumbotron>
+				</Row>
+				<Row className="scores-view-game-results">
+					<Jumbotron className="results-view">TEST</Jumbotron>
+				</Row>
+				<Row className="scores-view-game-results">
+					<Jumbotron className="results-view">TEST</Jumbotron>
+				</Row>
 			</Container>
 		);
 	}
