@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./containers/Home";
 import Page404 from "./components/Page404";
+import Scores from "./components/Scores";
 
 import AppliedRoute from "./components/AppliedRoute";
 //import TermsAndConditions from "./components/TermsAndConditions";
@@ -14,6 +15,9 @@ export default ({ childProps }) => (
   <Switch>
     {/* This is our home page route for the main landing page to the app */}
     <AppliedRoute path="/" exact component={Home} props={childProps} />
+
+    {/* This is the privacy-policy Route */}
+    <AppliedRoute path="/scores" exact component={Scores} props={childProps} />
 
     {/* This is the terms-conditions Route 
                                    <AppliedRoute path="/terms-conditions"
