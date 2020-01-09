@@ -65,7 +65,15 @@ export default class Scores extends Component {
 								</Row>
 							</Col>
 
-							<Col className="team-record"></Col>
+							<Col className="team-record">
+								<Row>
+									<p className="text-muted w-l">(10-6)</p>
+								</Row>
+
+								<Row>
+									<p className="text-muted w-l">(10-6)</p>
+								</Row>
+							</Col>
 
 							<Col className="game-score"></Col>
 
@@ -74,7 +82,7 @@ export default class Scores extends Component {
 							<Col className="game-details-link"></Col>
 						</Row>
 						<Row className="press">
-							<p className="text-muted">
+							<p className="text-muted press-release">
 								Fairbairn (HOU): Game-winning 28-yard FG in OT
 							</p>
 						</Row>
