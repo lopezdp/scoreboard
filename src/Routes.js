@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./containers/Home";
 import Page404 from "./components/Page404";
-import Scores from "./components/Scores";
+import ScoresView from "./components/ScoresView";
 
 import AppliedRoute from "./components/AppliedRoute";
 //import TermsAndConditions from "./components/TermsAndConditions";
@@ -17,7 +17,12 @@ export default ({ childProps }) => (
     <AppliedRoute path="/" exact component={Home} props={childProps} />
 
     {/* This is the privacy-policy Route */}
-    <AppliedRoute path="/scores" exact component={Scores} props={childProps} />
+    <AppliedRoute
+      path="/scores"
+      exact
+      component={ScoresView}
+      props={childProps}
+    />
 
     {/* This is the terms-conditions Route 
                                    <AppliedRoute path="/terms-conditions"

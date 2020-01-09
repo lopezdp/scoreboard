@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import Image from "react-bootstrap/Image";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
@@ -8,18 +7,46 @@ import Col from "react-bootstrap/Col";
 import Media from "react-media";
 import "./Scores.css";
 import Image from "react-bootstrap/Image";
-//import UiLoadBtn from "./UiLoadBtn";
-//import Tooltip from "react-bootstrap/Tooltip";
-//import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 
 export default class Scores extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			isLoading: false
+			cls1: "",
+			cls2: ""
 		};
 	}
+
+	componentDidMount() {
+		// Determine className for scores when component mounts
+		this.selectClassNaming();
+	}
+
+	/*
+	 * Selects the appropriate class for the scoring
+	 * displays text-muted Bootstrap styling for
+	 * Loser based on props passed from parent.
+	 *
+	 * The function will set the state used for the
+	 * className when called on Mount.
+	 *
+	 * selectClassNaming
+	 *
+	 */
+	selectClassNaming = () => {
+		if (this.props.koh1 === "false" && this.props.koh2 === "true") {
+			this.setState({
+				cls1: "text-muted points",
+				cls2: "points"
+			});
+		} else {
+			this.setState({
+				cls2: "text-muted points",
+				cls1: "points"
+			});
+		}
+	};
 
 	render() {
 		return (
@@ -33,27 +60,27 @@ export default class Scores extends Component {
 									<Row>
 										<Col className="league-rank">
 											<Row>
-												<p>5</p>
+												<p>{this.props.rank1}</p>
 											</Row>
 
 											<Row>
-												<p>4</p>
+												<p>{this.props.rank2}</p>
 											</Row>
 										</Col>
 
 										<Col className="team-logo">
 											<Row>
 												<Image
-													alt="Bills"
-													src="/img/Bills.png"
+													alt="NFL Logo"
+													src={this.props.logo1}
 													className="nfl-icon"
 												/>
 											</Row>
 
 											<Row>
 												<Image
-													alt="Texans"
-													src="/img/Texans.png"
+													alt="NFL Logo"
+													src={this.props.logo2}
 													className="nfl-icon"
 												/>
 											</Row>
@@ -61,44 +88,52 @@ export default class Scores extends Component {
 
 										<Col className="team-name-xs">
 											<Row>
-												<p>Bills</p>
+												<p>{this.props.teamName1}</p>
 											</Row>
 
 											<Row>
-												<p>Texans</p>
+												<p>{this.props.teamName2}</p>
 											</Row>
 										</Col>
 
 										<Col className="team-record">
 											<Row>
 												<p className="text-muted w-l">
-													(10-6)
+													{this.props.teamRecord1}
 												</p>
 											</Row>
 
 											<Row>
 												<p className="text-muted w-l">
-													(10-6)
+													{this.props.teamRecord2}
 												</p>
 											</Row>
 										</Col>
 
 										<Col className="game-score">
 											<Row>
-												<p className="text-muted points">
-													19
+												<p
+													className={`${this.state.cls1}`}
+												>
+													{this.props.teamScore1}
 												</p>
 											</Row>
 
 											<Row>
-												<p className="points">22</p>
+												<p
+													className={`${this.state.cls2}`}
+												>
+													{this.props.teamScore2}
+												</p>
 											</Row>
 										</Col>
 									</Row>
 									<Row>
 										<Col className="match-result-sm">
 											<Row>
-												<p className="result">FINAL</p>
+												<p className="result">
+													{this.props.gameStatus}
+												</p>
 											</Row>
 										</Col>
 
@@ -123,8 +158,7 @@ export default class Scores extends Component {
 									</Row>
 									<Row className="press">
 										<p className="text-muted press-release">
-											Fairbairn (HOU): Game-winning
-											28-yard FG in OT
+											{this.props.resultMsg}
 										</p>
 									</Row>
 								</Jumbotron>
@@ -142,27 +176,27 @@ export default class Scores extends Component {
 									<Row>
 										<Col className="league-rank">
 											<Row>
-												<p>5</p>
+												<p>{this.props.rank1}</p>
 											</Row>
 
 											<Row>
-												<p>4</p>
+												<p>{this.props.rank2}</p>
 											</Row>
 										</Col>
 
 										<Col className="team-logo">
 											<Row>
 												<Image
-													alt="Bills"
-													src="/img/Bills.png"
+													alt="NFL Logo"
+													src={this.props.logo1}
 													className="nfl-icon"
 												/>
 											</Row>
 
 											<Row>
 												<Image
-													alt="Texans"
-													src="/img/Texans.png"
+													alt="NFL Logo"
+													src={this.props.logo2}
 													className="nfl-icon"
 												/>
 											</Row>
@@ -170,43 +204,51 @@ export default class Scores extends Component {
 
 										<Col className="team-name-sm">
 											<Row>
-												<p>Bills</p>
+												<p>{this.props.teamName1}</p>
 											</Row>
 
 											<Row>
-												<p>Texans</p>
+												<p>{this.props.teamName2}</p>
 											</Row>
 										</Col>
 
 										<Col className="team-record">
 											<Row>
 												<p className="text-muted w-l">
-													(10-6)
+													{this.props.teamRecord1}
 												</p>
 											</Row>
 
 											<Row>
 												<p className="text-muted w-l">
-													(10-6)
+													{this.props.teamRecord2}
 												</p>
 											</Row>
 										</Col>
 
 										<Col className="game-score">
 											<Row>
-												<p className="text-muted points">
-													19
+												<p
+													className={`${this.state.cls1}`}
+												>
+													{this.props.teamScore1}
 												</p>
 											</Row>
 
 											<Row>
-												<p className="points">22</p>
+												<p
+													className={`${this.state.cls2}`}
+												>
+													{this.props.teamScore2}
+												</p>
 											</Row>
 										</Col>
 
 										<Col className="match-result-sm">
 											<Row>
-												<p className="result">FINAL</p>
+												<p className="result">
+													{this.props.gameStatus}
+												</p>
 											</Row>
 										</Col>
 
@@ -231,8 +273,7 @@ export default class Scores extends Component {
 									</Row>
 									<Row className="press">
 										<p className="text-muted press-release">
-											Fairbairn (HOU): Game-winning
-											28-yard FG in OT
+											{this.props.resultMsg}
 										</p>
 									</Row>
 								</Jumbotron>
@@ -250,27 +291,27 @@ export default class Scores extends Component {
 									<Row>
 										<Col className="league-rank">
 											<Row>
-												<p>5</p>
+												<p>{this.props.rank1}</p>
 											</Row>
 
 											<Row>
-												<p>4</p>
+												<p>{this.props.rank2}</p>
 											</Row>
 										</Col>
 
 										<Col className="team-logo">
 											<Row>
 												<Image
-													alt="Bills"
-													src="/img/Bills.png"
+													alt="NFL Logo"
+													src={this.props.logo1}
 													className="nfl-icon"
 												/>
 											</Row>
 
 											<Row>
 												<Image
-													alt="Texans"
-													src="/img/Texans.png"
+													alt="NFL Logo"
+													src={this.props.logo2}
 													className="nfl-icon"
 												/>
 											</Row>
@@ -278,43 +319,51 @@ export default class Scores extends Component {
 
 										<Col className="team-name-md">
 											<Row>
-												<p>Bills</p>
+												<p>{this.props.teamName1}</p>
 											</Row>
 
 											<Row>
-												<p>Texans</p>
+												<p>{this.props.teamName2}</p>
 											</Row>
 										</Col>
 
 										<Col className="team-record">
 											<Row>
 												<p className="text-muted w-l">
-													(10-6)
+													{this.props.teamRecord1}
 												</p>
 											</Row>
 
 											<Row>
 												<p className="text-muted w-l">
-													(10-6)
+													{this.props.teamRecord2}
 												</p>
 											</Row>
 										</Col>
 
 										<Col className="game-score">
 											<Row>
-												<p className="text-muted points">
-													19
+												<p
+													className={`${this.state.cls1}`}
+												>
+													{this.props.teamScore1}
 												</p>
 											</Row>
 
 											<Row>
-												<p className="points">22</p>
+												<p
+													className={`${this.state.cls2}`}
+												>
+													{this.props.teamScore2}
+												</p>
 											</Row>
 										</Col>
 
 										<Col className="match-result">
 											<Row>
-												<p className="result">FINAL</p>
+												<p className="result">
+													{this.props.gameStatus}
+												</p>
 											</Row>
 										</Col>
 
@@ -339,8 +388,7 @@ export default class Scores extends Component {
 									</Row>
 									<Row className="press">
 										<p className="text-muted press-release">
-											Fairbairn (HOU): Game-winning
-											28-yard FG in OT
+											{this.props.resultMsg}
 										</p>
 									</Row>
 								</Jumbotron>
@@ -358,27 +406,27 @@ export default class Scores extends Component {
 									<Row>
 										<Col className="league-rank">
 											<Row>
-												<p>5</p>
+												<p>{this.props.rank1}</p>
 											</Row>
 
 											<Row>
-												<p>4</p>
+												<p>{this.props.rank2}</p>
 											</Row>
 										</Col>
 
 										<Col className="team-logo">
 											<Row>
 												<Image
-													alt="Bills"
-													src="/img/Bills.png"
+													alt="NFL Logo"
+													src={this.props.logo1}
 													className="nfl-icon"
 												/>
 											</Row>
 
 											<Row>
 												<Image
-													alt="Texans"
-													src="/img/Texans.png"
+													alt="NFL Logo"
+													src={this.props.logo2}
 													className="nfl-icon"
 												/>
 											</Row>
@@ -386,43 +434,51 @@ export default class Scores extends Component {
 
 										<Col className="team-name">
 											<Row>
-												<p>Bills</p>
+												<p>{this.props.teamName1}</p>
 											</Row>
 
 											<Row>
-												<p>Texans</p>
+												<p>{this.props.teamName2}</p>
 											</Row>
 										</Col>
 
 										<Col className="team-record">
 											<Row>
 												<p className="text-muted w-l">
-													(10-6)
+													{this.props.teamRecord1}
 												</p>
 											</Row>
 
 											<Row>
 												<p className="text-muted w-l">
-													(10-6)
+													{this.props.teamRecord2}
 												</p>
 											</Row>
 										</Col>
 
 										<Col className="game-score">
 											<Row>
-												<p className="text-muted points">
-													19
+												<p
+													className={`${this.state.cls1}`}
+												>
+													{this.props.teamScore1}
 												</p>
 											</Row>
 
 											<Row>
-												<p className="points">22</p>
+												<p
+													className={`${this.state.cls2}`}
+												>
+													{this.props.teamScore2}
+												</p>
 											</Row>
 										</Col>
 
 										<Col className="match-result">
 											<Row>
-												<p className="result">FINAL</p>
+												<p className="result">
+													{this.props.gameStatus}
+												</p>
 											</Row>
 										</Col>
 
@@ -447,8 +503,7 @@ export default class Scores extends Component {
 									</Row>
 									<Row className="press">
 										<p className="text-muted press-release">
-											Fairbairn (HOU): Game-winning
-											28-yard FG in OT
+											{this.props.resultMsg}
 										</p>
 									</Row>
 								</Jumbotron>
