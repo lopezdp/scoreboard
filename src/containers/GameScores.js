@@ -45,7 +45,7 @@ export default class GameScores extends Component {
 					query="(max-width: 506px)"
 					render={() => (
 						<Container className="main-view" fluid>
-							<Row className="game-view-title">
+							<Row className="game-view-title-sm">
 								<h2>Games - Wild Card Weekend</h2>
 							</Row>
 							<Row className="game-view-result">

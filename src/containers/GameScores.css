@@ -25,6 +25,36 @@
 	font-size: 24px;
 }
 
+.game-view-title-sm {
+	justify-content: flex-start;
+	padding-left: 25px;
+	padding-top: 30px;
+}
+
+.game-view-title-sm h2 {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	margin-bottom: 20px;
+	color: #545e69;
+	font-size: 22px;
+}
+
+@media (max-width: 374px) {
+	.game-view-title-sm {
+		justify-content: flex-start;
+		padding-left: 0px;
+		padding-top: 30px;
+	}
+
+	.game-view-title-sm h2 {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 700;
+		margin-bottom: 20px;
+		color: #545e69;
+		font-size: 24px;
+	}
+}
+
 .game-view-result {
 	justify-content: flex-start;
 	padding-left: 25px;
@@ -134,5 +164,3 @@
 	height: 100%;
 	border: 0;
 }
-
-
