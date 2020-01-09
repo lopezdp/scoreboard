@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
-
 import "./GameScores.css";
 import IframeComm from "react-iframe-comm";
+import Media from "react-media";
 
 export default class GameScores extends Component {
 	constructor(props) {
@@ -40,24 +40,145 @@ export default class GameScores extends Component {
 		};
 
 		return (
-			<Container className="main-view" fluid>
-				<Row className="game-view-title">
-					<h2>Games - Wild Card Weekend</h2>
-				</Row>
-				<Row className="game-view-result">
-					<h3>Final</h3>
-				</Row>
+			<div>
+				<Media
+					query="(max-width: 506px)"
+					render={() => (
+						<Container className="main-view" fluid>
+							<Row className="game-view-title">
+								<h2>Games - Wild Card Weekend</h2>
+							</Row>
+							<Row className="game-view-result">
+								<h3>Final</h3>
+							</Row>
 
-				<Container className="iframe-container">
-					<IframeComm
-						className="iframe-component"
-						attributes={attributes}
-						postMessageData={postMessageData}
-						handleReady={onReady}
-						handleReceiveMessage={onReceiveMessage}
-					/>
-				</Container>
-			</Container>
+							<Container className="iframe-container-s">
+								<IframeComm
+									attributes={attributes}
+									postMessageData={postMessageData}
+									handleReady={onReady}
+									handleReceiveMessage={onReceiveMessage}
+								/>
+							</Container>
+						</Container>
+					)}
+				/>
+
+				<Media
+					query="(min-width: 507px) and (max-width: 666px)"
+					render={() => (
+						<Container className="main-view" fluid>
+							<Row className="game-view-title">
+								<h2>Games - Wild Card Weekend</h2>
+							</Row>
+							<Row className="game-view-result">
+								<h3>Final</h3>
+							</Row>
+
+							<Container className="iframe-container-xs">
+								<IframeComm
+									attributes={attributes}
+									postMessageData={postMessageData}
+									handleReady={onReady}
+									handleReceiveMessage={onReceiveMessage}
+								/>
+							</Container>
+						</Container>
+					)}
+				/>
+
+				<Media
+					query="(min-width: 667px) and (max-width: 767px)"
+					render={() => (
+						<Container className="main-view" fluid>
+							<Row className="game-view-title">
+								<h2>Games - Wild Card Weekend</h2>
+							</Row>
+							<Row className="game-view-result">
+								<h3>Final</h3>
+							</Row>
+
+							<Container className="iframe-container-sm">
+								<IframeComm
+									attributes={attributes}
+									postMessageData={postMessageData}
+									handleReady={onReady}
+									handleReceiveMessage={onReceiveMessage}
+								/>
+							</Container>
+						</Container>
+					)}
+				/>
+
+				<Media
+					query="(min-width: 768px) and (max-width: 979px)"
+					render={() => (
+						<Container className="main-view" fluid>
+							<Row className="game-view-title">
+								<h2>Games - Wild Card Weekend</h2>
+							</Row>
+							<Row className="game-view-result">
+								<h3>Final</h3>
+							</Row>
+
+							<Container className="iframe-container-md">
+								<IframeComm
+									attributes={attributes}
+									postMessageData={postMessageData}
+									handleReady={onReady}
+									handleReceiveMessage={onReceiveMessage}
+								/>
+							</Container>
+						</Container>
+					)}
+				/>
+
+				<Media
+					query="(min-width: 980px) and (max-width: 1239px)"
+					render={() => (
+						<Container className="main-view" fluid>
+							<Row className="game-view-title">
+								<h2>Games - Wild Card Weekend</h2>
+							</Row>
+							<Row className="game-view-result">
+								<h3>Final</h3>
+							</Row>
+
+							<Container className="iframe-container-lg">
+								<IframeComm
+									attributes={attributes}
+									postMessageData={postMessageData}
+									handleReady={onReady}
+									handleReceiveMessage={onReceiveMessage}
+								/>
+							</Container>
+						</Container>
+					)}
+				/>
+
+				<Media
+					query="(min-width: 1240px)"
+					render={() => (
+						<Container className="main-view" fluid>
+							<Row className="game-view-title">
+								<h2>Games - Wild Card Weekend</h2>
+							</Row>
+							<Row className="game-view-result">
+								<h3>Final</h3>
+							</Row>
+
+							<Container className="iframe-container">
+								<IframeComm
+									attributes={attributes}
+									postMessageData={postMessageData}
+									handleReady={onReady}
+									handleReceiveMessage={onReceiveMessage}
+								/>
+							</Container>
+						</Container>
+					)}
+				/>
+			</div>
 		);
 	}
 }
