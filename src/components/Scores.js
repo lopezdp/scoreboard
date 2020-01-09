@@ -85,9 +85,17 @@ export default class Scores extends Component {
 								</Row>
 							</Col>
 
-							<Col className="match-result"></Col>
+							<Col className="match-result">
+								<Row>
+									<p className="result">FINAL</p>
+								</Row>
+							</Col>
 
-							<Col className="game-details-link"></Col>
+							<Col className="game-details-link">
+								<Row>
+									<p className="detail-link">GAME DETAILS</p>
+								</Row>
+							</Col>
 						</Row>
 						<Row className="press">
 							<p className="text-muted press-release">

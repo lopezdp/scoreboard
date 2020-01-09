@@ -143,15 +143,36 @@
 }
 
 .game-score {
-	max-width: 60px;
+	max-width: 40px;
 	padding-right: 0px;
 	padding-left: 0px;
 }
 
 .game-score .row:nth-child(1) p {
-	margin-top: 1rem;
+	margin-top: 0.75rem;
+	font-size: 20px;
 }
 
 .game-score .row:nth-child(2) p {
-	margin-top: 0.2rem;
+	margin-top: -0.2rem;
+	font-size: 20px;
+}
+
+.match-result {
+	max-width: 150px;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-right: 1px solid #dae3e7;
+}
+.match-result .row {
+	position: relative;
+	padding-right: 20px;
+	justify-content: flex-end;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+}
+
+.result {
+	position: absolute;
+	transform: translate(-0%, 160%);
 }
