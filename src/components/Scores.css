@@ -122,9 +122,16 @@
 	margin-top: 0.2rem;
 }
 
+.points,
 .w-l {
 	font-weight: 700;
 	font-size: 16px;
+}
+
+.team-record {
+	max-width: 60px;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 
 .team-record .row:nth-child(1) p {
@@ -132,5 +139,19 @@
 }
 
 .team-record .row:nth-child(2) p {
+	margin-top: 0.2rem;
+}
+
+.game-score {
+	max-width: 60px;
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.game-score .row:nth-child(1) p {
+	margin-top: 1rem;
+}
+
+.game-score .row:nth-child(2) p {
 	margin-top: 0.2rem;
 }

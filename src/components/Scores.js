@@ -75,7 +75,15 @@ export default class Scores extends Component {
 								</Row>
 							</Col>
 
-							<Col className="game-score"></Col>
+							<Col className="game-score">
+								<Row>
+									<p className="text-muted points">19</p>
+								</Row>
+
+								<Row>
+									<p className="points">22</p>
+								</Row>
+							</Col>
 
 							<Col className="match-result"></Col>
 
