@@ -5,6 +5,10 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-weight: 400;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
 }
 
 .game-view-title {
@@ -39,7 +43,7 @@
 	position: relative;
 	overflow: hidden;
 	padding-top: 66%;
-	width: 100%;
+	max-width: 100%;
 }
 
 .iframe-container iframe {
